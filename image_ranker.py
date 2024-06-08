@@ -111,10 +111,7 @@ class ImageRanker:
                 self.standings_text.grid(row=0, column=0, columnspan=2, sticky="nsew")
                 self.copy_button.grid(row=1, column=0, columnspan=2, sticky="ew")
                 self.standings_text.config(
-                    text="\n".join(
-                        f"{i + 1}: {os.path.basename(image)}"
-                        for i, image in enumerate(self.final_standings)
-                    )
+                    text="Click to copy final standings to clipboard:\n"
                 )
 
     def select_folder(self):
